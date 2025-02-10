@@ -1,25 +1,22 @@
-public class prodotto {
+package prodotto;
+
+public class Prodotto {
     private int codice;
-    private string nome ;
-    private string marca;
+    private String nome;
+    private String marca;
     private double prezzo;
     private double iva;
 
-    // costruttore
-    public prodotto (int codice, string,nome ,string marca,double prezzo,double iva){
-
-
-        this.codice=codice;
-        this.nome=nome;
-        this.marca=marca;
-        this.prezzo=prezzo;
-        this.iva=iva;
-        
-
+    // Costruttore 
+    public Prodotto(int codice, String nome, String marca, double prezzo, double iva) {
+        this.codice = codice;
+        this.nome = nome;
+        this.marca = marca;
+        this.prezzo = prezzo;
+        this.iva = iva;
     }
 
-    //metodi
-
+    // 
     public int getCodice() {
         return codice;
     }
@@ -56,8 +53,7 @@ public class prodotto {
         this.iva = iva;
     }
 
-    public String toString() {
-        return "Prodotto [codice=" + codice + ", nome=" + nome + ", marca=" + marca + ", prezzo=" + prezzo + ", iva=" + iva + "]";
+    public double calcolaPrezzoFinale() {
+        return prezzo + (prezzo * iva / 100);
     }
-
 }
